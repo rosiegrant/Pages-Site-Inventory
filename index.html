@@ -16,11 +16,11 @@ limitations under the License.
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Google Sheets API Quickstart</title>
+    <title>Pages Site Inventory Draft</title>
     <meta charset='utf-8' />
   </head>
   <body>
-    <p>Google Sheets API Quickstart</p>
+    <p>Pages Site Inventory Draft (Using Google Example)</p>
 
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" style="display: none;">Authorize</button>
@@ -149,7 +149,7 @@ limitations under the License.
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
-            appendPre('This is all the data in the site inventory spreadsheet spreadsheet');
+            appendPre('Here are the rows from the pages site inventory spreadsheet!');
             appendPre('');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
