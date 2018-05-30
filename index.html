@@ -149,7 +149,8 @@ limitations under the License.
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
-            appendPre('This is all the data in the spreadsheet');
+            appendPre('This is all the data in the site inventory spreadsheet spreadsheet');
+            appendPre('');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
                 appendPre('Row ' + i);
