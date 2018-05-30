@@ -141,7 +141,7 @@ limitations under the License.
       }
        
         
-     /** 150EQrEcq_rFaCTLKtGQPsNpoZDg1ZdUR9Ps0zEqmKoA */
+     /** Google sheet id for pages site inventory: 150EQrEcq_rFaCTLKtGQPsNpoZDg1ZdUR9Ps0zEqmKoA */
      function listRows() {
          gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '150EQrEcq_rFaCTLKtGQPsNpoZDg1ZdUR9Ps0zEqmKoA',
@@ -149,13 +149,15 @@ limitations under the License.
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
-            appendPre('Column, Row:');
+            appendPre('This is all the data in the spreadsheet');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
-              // Print columns A and E, which correspond to indices 0 and 4.
+                appendPre('Row ' + i);
+              // print everything
                 for (j = 0; j < row.length; j++) {
                     appendPre(row[j] + ', ');
                 }
+                appendPre(' ');
             }
           } else {
             appendPre('No data found.');
